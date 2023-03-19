@@ -7,8 +7,8 @@ pdf_writer = PyPDF4.PdfFileWriter()
 
 
 rotate_num: int = int(input("How much to rotate clockwise? "))
-for pagenum in range(pdf_reader.numPages):
-    page = pdf_reader.getPage(pagenum)
+for page_num in range(pdf_reader.numPages):
+    page = pdf_reader.getPage(page_num)
     page.rotateClockwise(rotate_num)
     pdf_writer.addPage(page)
 
